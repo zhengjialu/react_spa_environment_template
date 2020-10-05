@@ -1,2 +1,2 @@
 # template
-环境模版
+React 开发环境
