@@ -1,0 +1,27 @@
+{
+  "name": "react_environment_template",
+  "version": "1.0.0",
+  "description": "react 开发环境",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhengjialu/react_environment_template.git"
+  },
+  "author": "jialu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhengjialu/react_environment_template/issues"
+  },
+  "homepage": "https://github.com/zhengjialu/react_environment_template#readme",
+  "devDependencies": {
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
