@@ -20,8 +20,17 @@
   },
   "homepage": "https://github.com/zhengjialu/react_environment_template#readme",
   "devDependencies": {
+    "css-loader": "^4.3.0",
+    "csv-loader": "^3.0.3",
+    "file-loader": "^6.1.1",
+    "style-loader": "^2.0.0",
     "webpack": "^5.0.0",
     "webpack-cli": "^4.0.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
