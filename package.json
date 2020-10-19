@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/zhengjialu/react_environment_template#readme",
   "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.3.0",
     "csv-loader": "^3.0.3",
@@ -33,10 +37,16 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "antd": "^4.7.2",
+    "axios": "^0.20.0",
+    "core-js": "^3.6.5",
+    "lodash": "^4.17.20",
     "mobx": "^6.0.1",
     "mobx-react": "^7.0.0",
+    "moment": "^2.29.1",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "regenerator-runtime": "^0.13.7"
   }
 }
