@@ -11,11 +11,34 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js|jsx)$/,
+        use: [
+          'babel-loader?cacheDirectory'
+        ],
+        exclude: /node_modules/
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.styl$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'stylus-loader',
+        ]
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
