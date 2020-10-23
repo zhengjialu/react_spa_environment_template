@@ -1,12 +1,13 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const package = require('../package.json')
 
 module.exports = {
-  entry: './src/page/index',
+  entry: path.resolve(__dirname, '/src/pages/index'),
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, '../dist')
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -44,6 +45,14 @@ module.exports = {
         ],
       },
       {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'less-loader',
+        ],
+      },
+      {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           'file-loader',
@@ -76,6 +85,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      title: package.name,
       template: '/src/index.ejs',
     }),
   ],
