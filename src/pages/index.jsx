@@ -1,45 +1,22 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import ReactDom from 'react-dom'
-import {HashRouter as Router, Redirect, Route} from 'react-router-dom'
+import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 
 import Hello from './page-hello'
 
 const routeConfig = [
-  {
-    path: "/",
-    component: Hello,
-    routes: [
-      {
-        path: "/111",
-        component: Hello,
-        routes: [
-          {
-            path: "/222",
-            component: Hello
-          }
-        ]
-      }
-    ]
-  }
+  { path: "/", component: Hello }
 ]
-
-const RouteDom = route => {
-  return (
-    <Route
-      path={route.path}
-      render={props => (
-        <route.component {...props} routes={route.routes} />
-      )}
-    />
-  )
-}
 
 class RouterUrl extends Component {
   render() {
     return(
       <Router>
-        {routeConfig.map((item, i) => <RouteDom key={i} {...item} />)}
-        <Redirect from="/hello" to="/" />
+        <Switch>
+          { routeConfig.map((item, i) => <Route exact key={i} path={item.path} component={item.component} />) }
+          <Route path="*">没有匹配到页面</Route>
+          <Redirect from="/hello" to="/" />
+        </Switch>
       </Router>
     )
   }

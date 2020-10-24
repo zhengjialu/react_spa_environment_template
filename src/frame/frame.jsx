@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Layout } from 'antd'
-import {Link} from 'react-router-dom'
+import NavMenu from './nav'
 
 const { Header, Footer, Content } = Layout;
 
@@ -10,7 +10,7 @@ class Frame extends Component {
       <div className="frame">
         <Layout>
           <Header>
-            <Link to="/hello">Header</Link>
+            <NavMenu />
           </Header>
           <Content>
             {this.props.children}
