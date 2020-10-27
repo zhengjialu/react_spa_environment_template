@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const package = require('../package.json')
+const config = require('./project.config')
 
 module.exports = {
   entry: path.resolve(__dirname, '/src/pages/index'),
@@ -85,11 +85,12 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: package.name,
+      title: config.name,
       template: '/src/index.ejs',
     }),
   ],
   devServer: {
+    port: config.port,
     contentBase: './dist',
   }
 }

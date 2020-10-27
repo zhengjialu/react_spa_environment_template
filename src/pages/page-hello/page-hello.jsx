@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
-import { observable } from 'mobx';
-import Frame from '../../frame'
+import Store from './store'
+
+const store = new Store
 
 @observer
 class Hello extends Component {
-  @observable content = 'hello world!'
 
   render() {
     return (
-      <Frame>
-        <div className="page-hello">{this.content}</div>
-      </Frame>
+      <div className="page-hello">{store.content}</div>
     )
   }
 }

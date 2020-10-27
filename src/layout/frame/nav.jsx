@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Menu } from 'antd'
 import { Link } from 'react-router-dom'
-import routeUrl from '../router'
+import routeUrl from '../../router'
 
 const { SubMenu } = Menu
 

@@ -1,0 +1,10 @@
+const package = require('../package.json')
+
+module.exports = {
+  // 项目名称
+  name: package.name,
+  // 项目版本
+  version: package.version,
+  // 开发监听端口
+  port: 8080,
+}
