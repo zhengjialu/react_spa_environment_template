@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const config = require('./project.config')
 
 module.exports = {
@@ -88,9 +89,13 @@ module.exports = {
       title: config.name,
       template: '/src/index.ejs',
     }),
+    new FriendlyErrorsWebpackPlugin()
   ],
   devServer: {
+    hot: true,
     port: config.port,
     contentBase: './dist',
-  }
+    proxy: config.proxy
+  },
+  stats: 'errors-only'
 }

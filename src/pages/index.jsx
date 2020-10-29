@@ -4,6 +4,7 @@ import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import Frame from '../layout/frame'
 import Hello from './page-hello'
 
+// 路由匹配定义
 const routeConfig = [
   { path: "/", component: Hello }
 ]
