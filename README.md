@@ -8,6 +8,9 @@
 ├── mock                           mock 数据配置目录
 │   └── mock-hello.json
 ├── package.json
+├── .babelrc                       babel 配置项
+├── .nycrc                         单元测试配置项
+├── .gitignore
 ├── src                            页面开发
 │   ├── assets                     项目资源
 │   │   ├── icons                  项目 icon 资源
@@ -34,5 +37,7 @@
 │   │       └── store.js           状态管理
 │   └── router                     路由地址配置
 │       └── index.js               路由跳转定义
+├── test                           单元测试
+│   └── *.test.js                  单元测试文件
 └── project-tree
 ```
