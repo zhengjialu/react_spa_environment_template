@@ -13,7 +13,16 @@
     }],
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
     ["@babel/plugin-proposal-class-properties", { "loose" : true }],
-    "@babel/plugin-transform-runtime",
-    "istanbul"
-  ]
+    "@babel/plugin-transform-runtime"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "env"
+      ],
+      "plugins": [
+        "istanbul"
+      ]
+    }
+  }
 }
