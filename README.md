@@ -1,5 +1,10 @@
 # React 单页面 Template 环境
 
+> 框架 React：https://react.docschina.org/
+> UI 库 Ant Design：https://ant.design/index-cn
+> 路由 React-router：https://reactrouter.com/
+> 状态管理 Mobx：https://cn.mobx.js.org/
+
 ```
 ├── README.md
 ├── config                         环境配置目录
@@ -7,6 +12,7 @@
 │   └── webpack.config.js          webpack 配置
 ├── mock                           mock 数据配置目录
 │   └── mock-hello.json
+├── postcss.config.js              CSS 预处理配置
 ├── package.json
 ├── .babelrc                       babel 配置项
 ├── .nycrc                         单元测试配置项
