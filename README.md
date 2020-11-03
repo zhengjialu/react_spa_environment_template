@@ -32,7 +32,6 @@
 │   │   │   ├── frame.styl
 │   │   │   ├── index.js
 │   │   │   └── nav.jsx
-│   │   └── sideber                项目导航栏
 │   ├── pages                      前端页面
 │   │   ├── index.jsx              路由渲染定义
 │   │   └── page-hello             项目模块
