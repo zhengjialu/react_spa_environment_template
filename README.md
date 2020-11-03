@@ -45,5 +45,5 @@
 │       └── index.js               路由跳转定义
 ├── test                           单元测试
 │   └── *.test.js                  单元测试文件
-└── project-tree
+└── react-project-tree
 ```
