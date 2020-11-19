@@ -7,13 +7,13 @@ class Store {
 
   @action testIo = async () => {
     try {
-      const {content} = await io.testIo({
+      const { content } = await io.testIo({
         ':id': 11,
       })
       runInAction(() => {
         this.content = content.name
       })
-    } catch(e) {
+    } catch (e) {
       message.error(e.message)
     }
   }

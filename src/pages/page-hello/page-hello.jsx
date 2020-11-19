@@ -20,7 +20,9 @@ class Hello extends Component {
     return (
       <div className="page-hello">
         {store.content}
-        <Button type="link" onClick={this.onClick}>点击</Button>
+        <Button type="link" onClick={this.onClick}>
+          点击
+        </Button>
       </div>
     )
   }

@@ -3,7 +3,7 @@
 > 框架 React：https://react.docschina.org/  
 > UI 库 Ant Design：https://ant.design/index-cn  
 > 路由 React-router：https://reactrouter.com/  
-> 状态管理 Mobx：https://cn.mobx.js.org/  
+> 状态管理 Mobx：https://cn.mobx.js.org/
 
 ```
 ├── README.md

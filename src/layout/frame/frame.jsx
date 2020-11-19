@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Layout } from 'antd'
 import NavMenu from './nav'
 
-const { Header, Footer, Content } = Layout;
+const { Header, Footer, Content } = Layout
 
 class Frame extends Component {
   render() {
@@ -12,9 +12,7 @@ class Frame extends Component {
           <Header>
             <NavMenu />
           </Header>
-          <Content>
-            {this.props.children}
-          </Content>
+          <Content>{this.props.children}</Content>
           <Footer>Footer</Footer>
         </Layout>
       </div>
