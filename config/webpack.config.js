@@ -2,6 +2,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
+const PrettierPlugin = require("prettier-webpack-plugin")
 const config = require('./project.config')
 
 module.exports = {
@@ -65,6 +67,11 @@ module.exports = {
       template: '/src/index.ejs',
     }),
     new FriendlyErrorsWebpackPlugin(),
+    new ESLintPlugin({
+      fix: true,
+      // failOnError: true
+    }),
+    new PrettierPlugin()
   ],
   devServer: {
     hot: true,

@@ -14,12 +14,7 @@ class RouterUrl extends Component {
         <Frame>
           <Switch>
             {routeConfig.map((item, i) => (
-              <Route
-                exact
-                key={i}
-                path={item.path}
-                component={item.component}
-              />
+              <Route exact key={i} path={item.path} component={item.component} />
             ))}
             <Route path="*">没有匹配到页面</Route>
             <Redirect from="/hello" to="/" />

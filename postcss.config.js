@@ -12,5 +12,11 @@ module.exports = {
         // Options
       },
     ],
+    [
+      'postcss-pxtorem',
+      {
+        // Options
+      },
+    ],
   ],
 }

@@ -56,10 +56,7 @@ class requestIO {
         // :id 参数处理
         Object.keys(options.data).forEach((key) => {
           if (key[0] === ':' && options.data) {
-            options.url = options.url.replace(
-              key,
-              encodeURIComponent(options.data[key])
-            )
+            options.url = options.url.replace(key, encodeURIComponent(options.data[key]))
             delete options.data[key]
           }
         })
@@ -75,10 +72,7 @@ class requestIO {
       if (typeof options.params === 'object') {
         Object.keys(options.params).forEach((key) => {
           if (key[0] === ':' && options.params) {
-            options.url = options.url.replace(
-              key,
-              encodeURIComponent(options.params[key])
-            )
+            options.url = options.url.replace(key, encodeURIComponent(options.params[key]))
           }
         })
       }
