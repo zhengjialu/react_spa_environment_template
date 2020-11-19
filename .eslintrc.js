@@ -24,5 +24,7 @@ module.exports = {
     'no-extra-parens': 'error',
     'no-useless-return': 'error',
     'symbol-description': 'error',
+    'no-multi-spaces': 'error',
+    'array-bracket-spacing': ['error', 'never']
   },
 }
