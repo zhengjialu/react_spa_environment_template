@@ -4,9 +4,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const PrettierPlugin = require("prettier-webpack-plugin")
+const { HotModuleReplacementPlugin } = require('webpack')
 const config = require('./project.config')
+const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
+  mode: isProduction ? 'production' : 'development',
   entry: path.resolve(__dirname, '/src/pages/index'),
   output: {
     filename: 'bundle.js',
@@ -57,9 +60,6 @@ module.exports = {
     ],
   },
   devtool: 'inline-source-map',
-  optimization: {
-    minimize: false,
-  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
@@ -67,6 +67,7 @@ module.exports = {
       template: '/src/index.ejs',
     }),
     new FriendlyErrorsWebpackPlugin(),
+    new HotModuleReplacementPlugin(),
     new ESLintPlugin({
       fix: true,
       // failOnError: true
@@ -75,8 +76,8 @@ module.exports = {
   ],
   devServer: {
     hot: true,
+    open: true,
     port: config.port,
-    contentBase: './dist',
     proxy: config.proxy,
   },
   stats: 'errors-only',
